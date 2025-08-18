@@ -1,7 +1,7 @@
 There are 3 possible Solutions for this problem.
 
-A. Brute Force: For every element A[i] scan the array A[i+1:] to check if A[i] + A[j] == target. Time Complexity:  O(n**2). Space Complexity: O(1)
+A. Brute Force: For every element A[i] scan the subarray A[i+1:] to check if A[i] + A[j] == target. Time Complexity:  O(n**2). Space Complexity: O(1)
 
-B. Sorting and Binary Search: Sort the array in ascending order and use Binary search to search for target - element in the array. Time Complexity:  O(logn + nlogn). logn for Binary Search and nlogn for Sorting. Note: Will not work if indexes are required for element.
+B. Sorting and Binary Search: Sort the array in ascending order, then use Binary search to look for target - element in the array for each element. Time Complexity:  O(logn + nlogn). logn per Binary Search and nlogn for Sorting. Note: This approach won’t work if the original indices of the elements are required, as sorting changes their order.
   
 C. HashMap: Iterate through the array and store target - A[i] as key and i as the value while simultaneously checking if A[i] exists in the HashMap. As A[i] + A[j] = target we can rewrite this as A[j] = target - A[i] and that is essentially what we are storing in the HashMap as key. Time Complexity:  O(n). Space Complexity: O(n)
