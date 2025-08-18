@@ -1,7 +1,9 @@
 import java.util.HashMap;
 
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
+class HashMapSolution 
+{
+    public int[] twoSum(int[] nums, int target) 
+	{
         
         HashMap<Integer, Integer> frequency = new HashMap<>();
         int[] result = new int[2];
@@ -21,7 +23,7 @@ class Solution {
             }
         }
 	
-	//Just to avoid compile time error of return type being an array for the function. Although we are returning above the result array we still need to include a return statement for the function at the end.
+		//Just to avoid compile time error of return type being an array for the function. Although we are returning above the result array we still need to include a return statement for the function at the end.
         return new int[] {};
     }
 }
