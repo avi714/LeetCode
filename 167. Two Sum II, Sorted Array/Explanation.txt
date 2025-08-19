@@ -1,0 +1,11 @@
+There are 3 possible Solutions for this problem.
+
+A. Brute Force: For every A[i] scan the subarray A[i+1:len-1] to check if A[i] + A[j] equals target. Time Complexity: O(n**2). Space Complexity: O(1)
+	
+B. Binary Search: For ever A[i], calculate target - A[i] and use binary search to search for this value in the subarray A[i+1:len-1]. Time Complexity: O(nlogn), O(n) for iterating over the array and O(log n) for each binary search. Space Complexity: O(1)
+	
+C. Two Pointer: Set a left pointer at 0 and right pointer at len(A) - 1. Iterate while l<r and check the sum A[l] + A[r]: 
+-> if the sum is > than the target, decrement r
+-> if the sum is < than the target, increment l
+-> If the sum equals the target then return the left and right pointers. 
+Time Complexity: O(n). Space Complexity: O(1)
