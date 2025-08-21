@@ -1,0 +1,5 @@
+A. Brute Force: For every element A[i], scan the array from A[i+1] onward to check if it exists. Time Complexity:  O(n**2). Space Complexity: O(1)
+	
+B. Sort and Search: Sort the array, then for every element A[i], check if it is equal to A[i+1]. Time Complexity: O(nlogn), since sorting takes O(nlogn) time. Space Complexity: O(n), if sorting is not done in-place.
+	
+C. HashMap/HashSet: For every element A[i], check if it already exists in the HashMap or HashSet. If it does, return True; otherwise, add it to the HashMap/HashSet. Time Complexity:  O(n). Space Complexity: O(n)
