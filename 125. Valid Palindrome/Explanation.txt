@@ -1,0 +1,5 @@
+Problem Statement: Check if all the alphanumeric characters in a string form a palindrome. Ignore non-alphanumeric characters and character casing.
+
+A. Clean the String and Reverse: Iterate through the original stringand create a new string containing only the alphanumeric characters (converted to lowercase for uniformity). Then, iterate over this cleaned string and create a reversed version. Finally, iterate over the cleaned string and its reversed version and check if they are equal. Time Complexity: O(n). Space Complexity: O(n)
+	
+B. Two Pointers: Initialize two pointers: a left pointer at index 0 and a right pointer at len(s)-1. While left is less than right, skip any non-alphanumeric characters by moving the pointers as needed. Then, compare the characters at s[left] and s[right] (after converting them to the same case). If they are not equal, return false. If they are equal, move both pointers inward and continue the comparison. Return true if the entire string is traversed without mismatches. Time Complexity: O(n). Space Complexity: O(1)
